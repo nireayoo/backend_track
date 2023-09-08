@@ -24,20 +24,19 @@ app.get('/api', (req,res) =>{
     const github_repo_url = 'https://github.com/nireayoo/backend_track.git';
 
     //date
-    const offset = new Date().getTimezoneOffset();
-    const now = new Date(Date.now() - (offset + (Math.random() * 4 - 2)) * 60 * 1000);  
+    // const offset = new Date().getTimezoneOffset();
+    const utc_time = new Date().toISOString().slice(0, -5) + 'Z';
 
     const format = {
         slack_name,
         current_day,
-        utc_time: now.toISOString(),
+        utc_time,
         track,
         github_file_url,
         github_repo_url,
         status_code: 200,
 
-
     };
-    res.json(format);
+    res.status(200).json(format);
     
 });
