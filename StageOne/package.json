@@ -1,22 +1,23 @@
 {
-  "name": "stage-1",
+  "name": "stageone",
   "version": "1.0.0",
-  "description": "My first attemot at the stage 1 project",
-  "main": "index.js",
+  "description": "node js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "Stage 1"
+    "url": "backend_track"
   },
   "keywords": [
-    "endpoint"
+    "endpoints"
   ],
   "author": "Seminire Adebiyi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }
