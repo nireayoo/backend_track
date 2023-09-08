@@ -20,7 +20,7 @@ app.get('/api', (req,res) =>{
     const current_day = weekDays[new Date().getDay()];
 
     //Github URLs
-    const github_file_url = 'https://github.com/nireayoo/backend_track/blob/8effad36eb52c35f1e6d5e73c9bc6a806608c114/StageOne/app.js';
+    const github_file_url = 'https://github.com/nireayoo/backend_track/blob/8effad36eb52c35f1e6d5e73c9bc6a806608c114/app.js';
     const github_repo_url = 'https://github.com/nireayoo/backend_track.git';
 
     //date

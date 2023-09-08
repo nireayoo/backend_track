@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "backend_track/StageOne"
+    "url": "backend_track"
   },
   "keywords": [
     "endpoints"
