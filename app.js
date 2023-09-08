@@ -25,7 +25,8 @@ app.get('/api', (req,res) =>{
 
     //date
     // const offset = new Date().getTimezoneOffset();
-    const utc_time = new Date().toISOString().slice(0, -5) + 'Z';
+    //const utc_time = new Date().toISOString().slice(0, -5) + 'Z';
+    const utc_time = new Date().toISOString().split('.')[0] +'Z';
 
     const format = {
         slack_name,
@@ -37,6 +38,6 @@ app.get('/api', (req,res) =>{
         status_code: 200,
 
     };
-    res.status(200).json(format);
+    res.status(200).json({format});
     
 });
