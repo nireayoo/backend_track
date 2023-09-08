@@ -15,21 +15,17 @@ app.get('/api', (req,res) =>{
     //Getting my query parameters,
     const {slack_name, track} = req.query;
 
-    //Validating timezone
-
     //Getting current day of the week
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
     const current_day = weekDays[new Date().getDay()];
+
     //Github URLs
-    const github_file_url = 'https://github.com/nireayoo/backend_track.git/StageOne';
+    const github_file_url = 'https://github.com/nireayoo/backend_track/blob/8effad36eb52c35f1e6d5e73c9bc6a806608c114/StageOne/app.js';
     const github_repo_url = 'https://github.com/nireayoo/backend_track.git';
 
     //date
-    
     const offset = new Date().getTimezoneOffset();
-    const now = new Date(Date.now() - (offset + (Math.random() * 4 - 2)) * 60 * 1000);   // +/- 2 minutes window
-
-    //responses
+    const now = new Date(Date.now() - (offset + (Math.random() * 4 - 2)) * 60 * 1000);  
 
     const format = {
         slack_name,
@@ -42,6 +38,6 @@ app.get('/api', (req,res) =>{
 
 
     };
-    res.status(200).json(format);
+    res.json(format);
     
 });
